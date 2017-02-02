@@ -49,7 +49,7 @@ func getAsm(w http.ResponseWriter, r *http.Request) {
 	cmd.Stdout = &out
 	err = cmd.Run()
 	if err != nil {
-		fmt.Fprintln(w, "Error compiling")
+		fmt.Fprintln(w, "Error compiling", err)
 		return
 	}
 	// replace real paths with fake paths
