@@ -1,7 +1,35 @@
-<html>
-<body>
-  <form action="/asm" method="post">
-    <textarea rows="10" cols="80" name="asm">package main
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Goasm - a Go assembly generator</title>
+    <meta name="description"
+          content="A Go assembly generator.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.22.0/codemirror.min.css">
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <!--[if lte IE 9]>
+        <p class="browserupgrade">You are using an 
+          <strong>outdated</strong> browser. Please 
+          <a href="http://browsehappy.com/">upgrade your browser</a>
+          to improve your experience and security.</p>
+        <![endif]-->
+  <body>
+    <h1><a href="index.html">Goasm</a></h1>
+    <h3>
+      By <a href="http://pr4tt.com">Simon Pratt</a>.
+      <a href="https://github.com/spratt/goasm">
+        Fork me on Github</a>.
+    </h3>
+    <span class="right">
+      <span id="message" class="hidden"></span>
+    </span><br clear="all">
+    <form id="asm-form" action="/asm" method="post">
+      <textarea id="gocode" rows="10" cols="80" name="gocode">package main
 
 import (
   "fmt"
@@ -9,11 +37,13 @@ import (
 
 func main() {
   fmt.Println("Hello, world")
-}
-    </textarea><br />
-    GOOS<input type="text" name="GOOS" value="linux">
-    GOARCH<input type="text" name="GOARCH" value="amd64">
-    <button type="submit">Submit</button>
-  </form>
-</body>
+}</textarea><textarea id="asm" readonly></textarea>
+      <br clear="all">
+      <button id="submit-btn" type="submit">Submit</button>
+    </form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.22.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/4.10.0/mode/go/go.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.22.0/addon/mode/simple.min.js"></script>
+    <script src="goasm.js"></script>
+  </body>
 </html>
