@@ -19,16 +19,16 @@
           to improve your experience and security.</p>
         <![endif]-->
   <body>
-    <h1><a href="index.html">Goasm</a></h1>
-    <h3>
-      By <a href="http://pr4tt.com">Simon Pratt</a>.
-      <a href="https://github.com/spratt/goasm">
-        Fork me on Github</a>.
-    </h3>
-    <span class="right">
-      <span id="message" class="hidden"></span>
-    </span><br clear="all">
     <form id="asm-form" action="/asm" method="post">
+      <div class="lh">
+        <h1><a href="index.html">Goasm</a></h1>
+        <h3>
+          By <a href="http://pr4tt.com">Simon Pratt</a>.
+          <a href="https://github.com/spratt/goasm">
+            Fork me on Github</a>.
+        </h3>
+        <div class="lh right bottom"><button id="submit-btn" type="submit">Submit</button></div>
+      </div>
       <textarea id="gocode" rows="10" cols="80" name="gocode">package main
 
 import (
@@ -36,10 +36,9 @@ import (
 )
 
 func main() {
-  fmt.Println("Hello, world")
+  fmt.Println("Hello, goasm")
 }</textarea><textarea id="asm" readonly></textarea>
       <br clear="all">
-      <button id="submit-btn" type="submit">Submit</button>
     </form>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.22.0/codemirror.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/4.10.0/mode/go/go.min.js"></script>
