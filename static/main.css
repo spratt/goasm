@@ -4,6 +4,7 @@ body {
     font-family: sans-serif;
     background-color: #eee;
     overflow-y: scroll;
+    margin: 0;
 }
 h1, h2, h3 {
     display: inline;
@@ -21,7 +22,7 @@ a:hover {
 .CodeMirror {
     border: 1px solid #333;
     height: 100%;
-    width: 49%;
+    width: 49.4%;
 }
 .cm-s-left {
     float: left;
@@ -29,7 +30,7 @@ a:hover {
 #asm {
     font-family: monospace;
     float: right;
-    width: 49%;
+    width: 49.4%;
     height: 100%;
     resize: none;
 }
