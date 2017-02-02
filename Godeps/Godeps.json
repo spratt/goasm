@@ -1,5 +1,5 @@
 {
-	"ImportPath": "github.com/spratt/hello-heroku-go",
+	"ImportPath": "github.com/spratt/goasm",
 	"GoVersion": "go1.7",
 	"GodepVersion": "v78",
 	"Packages": [

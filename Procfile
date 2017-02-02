@@ -1,1 +1,1 @@
-web: hello-heroku-go
+web: goasm
