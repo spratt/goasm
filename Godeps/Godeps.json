@@ -1,0 +1,9 @@
+{
+	"ImportPath": "github.com/spratt/hello-heroku-go",
+	"GoVersion": "go1.7",
+	"GodepVersion": "v78",
+	"Packages": [
+		"./..."
+	],
+	"Deps": []
+}
