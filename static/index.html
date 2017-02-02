@@ -1,0 +1,19 @@
+<html>
+<body>
+  <form action="/asm" method="post">
+    <textarea rows="10" cols="80" name="asm">package main
+
+import (
+  "fmt"
+)
+
+func main() {
+  fmt.Println("Hello, world")
+}
+    </textarea><br />
+    GOOS<input type="text" name="GOOS" value="linux">
+    GOARCH<input type="text" name="GOARCH" value="amd64">
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
