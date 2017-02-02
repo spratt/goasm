@@ -2,5 +2,8 @@
 	"comment": "",
 	"ignore": "test",
 	"package": [],
-	"rootPath": "github.com/spratt/hello-heroku-go"
+	"rootPath": "github.com/spratt/hello-heroku-go",
+    "heroku": {
+        "goVersion": "go1.7"
+    }
 }
