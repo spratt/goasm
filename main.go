@@ -47,10 +47,6 @@ func getAsm(w http.ResponseWriter, r *http.Request) {
 		tmpfile.Name())
 	var out bytes.Buffer
 	cmd.Stdout = &out
-	env := os.Environ()
-	env = append(env, fmt.Sprintf("GOOS=%s", "darwin"))
-	env = append(env, fmt.Sprintf("GOARCH=%s", "amd64"))
-	cmd.Env = env
 	err = cmd.Run()
 	if err != nil {
 		fmt.Fprintln(w, "Error compiling", err)
